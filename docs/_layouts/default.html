@@ -14,15 +14,22 @@
 <body class="ms-Fabric">
     {% include header.html %}
 	<div class="container-fluid px-6 py-9">
-        <div class="row">
-            {% include nav.html %}
-            <main id="markdown-content" class="col-12 col-md-8 px-2 markdown-body">
-                {{ content }}
-            </main>
-            <nav id="toc-content" class="col-2 d-none d-md-block">
-                {% include toc.html html=content sanitize=true h_min=2 h_max=2 %}
-            </nav>
-        </div>
+		<div class="row">
+			<div class="ms-MessageBar-text" role="alert">
+				<span class="ms-MessageBar-innerText">
+					<span>This site is obsolete and for reference only. The information in this documentation is not guaranteed to work with Bot Framework SDK versions after 4.9.1.</span>
+				</span>
+			</div>
+		</div>
+		<div class="row">
+		    {% include nav.html %}
+		    <main id="markdown-content" class="col-12 col-md-8 px-2 markdown-body">
+			{{ content }}
+		    </main>
+		    <nav id="toc-content" class="col-2 d-none d-md-block">
+			{% include toc.html html=content sanitize=true h_min=2 h_max=2 %}
+		    </nav>
+		</div>
 	</div>
 	{% include footer.html %}	
    <!-- jQuery CDN - Slim version (=without AJAX) -->
